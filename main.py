@@ -40,16 +40,15 @@ death_rect = death_surf.get_rect(center=(400, 100))
 slime_surf = pygame.image.load(
     "Platformer Art Complete Pack/Base pack/Enemies/slimeWalk1.png").convert_alpha()  # dont forget convert alpha, removes background black/white base
 slime_rect = slime_surf.get_rect(midbottom=(600, 310))
-<<<<<<< HEAD
+
 
 # player
 player_surf = pygame.image.load("Platformer Art Complete Pack/Base pack/Player/p3_jump.png").convert_alpha()
 player_rect = player_surf.get_rect(midbottom=(70, 310))
 player_gravity = 0
-=======
 score_rect = score_surf.get_rect(center=(100,50))
 death_rect = death_surf.get_rect(center=(100,100))
->>>>>>> 976d1282a54ee25dfedde0679cc9c09de9721577
+
 
 while True:
     for event in pygame.event.get():  # all possible events in pygame.event0
@@ -82,7 +81,7 @@ while True:
             slime_rect.left = 800
         screen.blit(slime_surf, slime_rect)
 
-<<<<<<< HEAD
+
         # player moving
         player_gravity += 1
         player_rect.y += player_gravity
@@ -95,13 +94,13 @@ while True:
         if slime_rect.colliderect(player_rect):
             game_active = False
             screen.blit(death_surf, death_rect)
-=======
-    mouse_pos = pygame.mouse.get_pos() # mouse.get_pressed() is a listener for mouse buttons
+
+#     mouse_pos = pygame.mouse.get_pos() # mouse.get_pressed() is a listener for mouse buttons
     # checking for collision
-    if player_rect.colliderect(slime_rect):
-        screen.blit(death_surf,death_rect)
-        pygame.display.update()
->>>>>>> 976d1282a54ee25dfedde0679cc9c09de9721577
+        if player_rect.colliderect(slime_rect):
+            screen.blit(death_surf,death_rect)
+            pygame.display.update()
+
     else:
         screen.fill((95,92,188))
         screen.blit(home_surf,home_rect)
