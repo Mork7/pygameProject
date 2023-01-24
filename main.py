@@ -16,6 +16,7 @@ def display_score():
     score_surf = font.render("Score: " + str(current_time // 1000), False, (64, 64, 64))
     score_rect = score_surf.get_rect(center=(100, 50))
     screen.blit(score_surf,score_rect)
+    score_rect = score_surf.get_rect(center=(100,50))
     print(current_time)
 
 
@@ -46,7 +47,6 @@ slime_rect = slime_surf.get_rect(midbottom=(600, 310))
 player_surf = pygame.image.load("Platformer Art Complete Pack/Base pack/Player/p3_jump.png").convert_alpha()
 player_rect = player_surf.get_rect(midbottom=(70, 310))
 player_gravity = 0
-score_rect = score_surf.get_rect(center=(100,50))
 death_rect = death_surf.get_rect(center=(100,100))
 
 
